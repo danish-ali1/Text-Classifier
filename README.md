@@ -13,7 +13,7 @@ Built with Node.js, Express 5, Zod and the `@google/genai` SDK.
 
 ```bash
 git clone https://github.com/danish-ali1/Text-Classifier
-cd text-classification-api
+cd Text-Classifier
 npm install
 cp .env.example .env
 ```
