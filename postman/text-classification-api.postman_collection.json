@@ -1,0 +1,197 @@
+{
+  "info": {
+    "_postman_id": "75f51e86-645e-4a38-995b-706b96dcf56b",
+    "name": "Text Classification API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47682862",
+    "_collection_link": "https://go.postman.co/collection/47682862-75f51e86-645e-4a38-995b-706b96dcf56b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseurl}}/health",
+          "host": [
+            "{{baseurl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Classify: query",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"text\":\"What are your working hours on Sunday?\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseurl}}/api/classify",
+          "host": [
+            "{{baseurl}}"
+          ],
+          "path": [
+            "api",
+            "classify"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Classify: complaint",
+      "protocolProfileBehavior": {
+        "disableCookies": false,
+        "followRedirects": true,
+        "maxResponseSize": 52428800,
+        "protocolVersion": "auto",
+        "strictSSL": false
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"text\":\"My order arrived late and damaged\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseurl}}/api/classify",
+          "host": [
+            "{{baseurl}}"
+          ],
+          "path": [
+            "api",
+            "classify"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Classify: feedback",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"text\":\"Loving the new app design, great job!\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseurl}}/api/classify",
+          "host": [
+            "{{baseurl}}"
+          ],
+          "path": [
+            "api",
+            "classify"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Classify: other",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"text\":\"The sky is blue today\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseurl}}/api/classify",
+          "host": [
+            "{{baseurl}}"
+          ],
+          "path": [
+            "api",
+            "classify"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error: missing text",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseurl}}/api/classify",
+          "host": [
+            "{{baseurl}}"
+          ],
+          "path": [
+            "api",
+            "classify"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error: empty text",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"text\": \"  \"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseurl}}/api/classify",
+          "host": [
+            "{{baseurl}}"
+          ],
+          "path": [
+            "api",
+            "classify"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
