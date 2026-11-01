@@ -1,5 +1,6 @@
 import express from 'express';
 import classifyRoutes from './routes/classify.routes.js';
+import { notFound, errorHandler } from './middlewares/error.js';
 
 const app = express();
 
@@ -10,5 +11,8 @@ app.get('/health', (req, res) => {
 });
 
 app.use("/api/classify",classifyRoutes)
+
+app.use(notFound);
+app.use(errorHandler);
 
 export default app;
